@@ -1,0 +1,215 @@
+body{
+    font-family: sans-serif;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.main-container{
+    display: flex;
+    flex-direction: row;
+    width: 700px;
+    overflow-x: hidden;
+}
+.intro-components{
+    width: 35%;
+    background: rgb(5, 2, 19);
+
+}
+.img-name-div{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid rgb(59, 58, 58);
+}
+img{
+    width: 180;
+    height: 180px;
+    border-radius: 50%;
+}
+.img-name-div p{
+    margin-top: -12px;
+    font-size: small;
+}
+.contact-info-div{
+    width: 100%;
+    height: 325px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 2px solid rgb(59, 58, 58);
+}
+.contacts a{
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: -5px;
+    color: white;
+}
+.contacts img{
+    width: 20px;
+    height: 20px;
+}
+.contacts p{
+    font-size: 13px;
+    margin-left: 8px;
+}
+.location{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.contact-info-div h3{
+    margin-top: 2.3rem;
+}
+
+.education-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.education{
+    width: 85%;
+    margin-bottom: -10px;
+}
+.education:last-of-type{
+    margin-bottom: 2rem;
+}
+.education p:nth-of-type(2){
+    margin-bottom: -8px;
+    margin-top: -10px;
+}
+.education p:last-of-type{
+    font-size: 12px;
+}
+.education p:first-of-type{
+    color:lightskyblue;
+    font-size: 14px;
+}
+
+
+
+
+
+.other-components{
+    width: 65%;
+    background: rgb(162, 212, 194);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.about{
+    width: 90%;
+    margin-top: 1.5rem;
+    margin-bottom: 0.9rem;
+}
+.about h2{
+    margin-bottom: -0.2rem;
+}
+.skill-section{
+    width: 90%;
+    /* margin-top: 1.2rem; */
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+}
+.sub-skill{
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0.6rem;
+}
+.skill{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.a{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    background: rgb(126, 186, 166);
+    justify-content: space-between;
+}
+.a div:last-of-type{
+    width: 20%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.a .a1{
+    background: rgb(108, 198, 108);
+    width: 70%;
+    height: 10;
+}
+.a .a2{
+    background: rgb(108, 198, 108);
+    width: 50%;
+    height: 10;
+}
+.a3{
+    background: rgb(108, 198, 108);
+    width: 60%;
+    height: 10;
+}
+.a4{
+    background: rgb(108, 198, 108);
+    width: 70%;
+    height: 10;
+}.a5{
+    background: rgb(108, 198, 108);
+    width: 50%;
+    height: 10;
+}
+.a6{
+    background: rgb(108, 198, 108);
+    width: 70%;
+    height: 10;
+}
+
+
+.project-section{
+    width: 90%;
+
+}
+
+.project{
+    margin-bottom: 1rem;
+}
+.project p:first-of-type{
+    margin-bottom: -0.6rem;
+    font-size: 14px;
+}
+.project p:last-of-type{
+    font-size: 12px;  
+    margin-bottom: 1rem;
+}
+.techs{
+    display: flex;
+    width: 100%;
+    height: 20px;
+    margin-top: -10px;
+    flex-direction: row;
+    align-items: center;
+}
+.techs ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.techs li:first-of-type{
+    margin-right: 1rem;
+    margin-left: -1.4rem;
+    font-size: 17px;
+}
+.techs li{
+    font-size: 14px;
+}
