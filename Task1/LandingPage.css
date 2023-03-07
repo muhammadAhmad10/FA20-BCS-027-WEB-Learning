@@ -1,0 +1,333 @@
+body{
+    color: white;
+    font-family: sans-serif;
+    width: 100vw;
+    margin-left: 0rem;
+    margin-top: -0.5rem;
+    overflow-x: hidden;
+}
+
+.fa-search{
+    width: 30px;
+    height: 30px;
+}
+#header{
+    display: flex;
+    flex-direction: row;
+    height: 3rem;
+    width: 100%;
+    justify-content: center;
+    /* background: #48094e; */
+    background: #0c0b0b;
+    align-items:center;
+    padding-top: 1.3rem;
+    padding-bottom: 1rem;
+}
+#logo p{
+    color: white;
+    font-size: 22px;
+    font-family: 'Sofia';
+}
+#logo{
+    width: 30%;
+    padding-left: 2rem;
+}
+#nav-items{
+    width: 40%;
+    justify-content: center;
+    align-items: center;
+}
+ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#search{
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 6%;
+    padding-bottom: 6px;
+}
+.search-bar{
+    display: none;
+}
+#search-icon:hover .search-bar{
+   display: block;
+   background: #000;  
+}
+#search-icon:hover .search-bar{
+    /* display: block; */
+    background: whitesmoke;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+    width: 100%;
+    justify-content: center;
+}
+#input{
+    width: 90%;
+    /* background: orange; */
+}
+.search-bar input{
+    width: 100%;
+    height: 90%;
+    background: transparent;
+    border: 0px;
+    padding-left: 10px;
+}
+#icon{
+    width: 10%;
+    /* background: blue; */
+    padding-left: 5px;
+    padding-top: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+}
+#header #nav-items ul li{
+    display: inline;
+}
+.nav-links{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+.nav-links:hover{
+    text-decoration: underline;
+    color: lightblue;
+}
+
+.dropdown{
+    display: none;
+    
+}
+.hi{
+    position: relative;
+    display: inline-block;
+}
+.dropdown li{
+    color: black;
+    text-decoration: none;
+    margin-left: -20px;
+    margin-top: 5px;
+    display: block;
+
+}
+.dropdown{
+    position: absolute;
+    width: 127px;
+    top:20px;
+    left:-60px;
+    background-color: rgb(36, 40, 40);
+}
+.hi:hover .dropdown{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+#nav-items ul li:nth-of-type(2) a{
+    color: white;
+    text-decoration: none;
+    display: inline;
+    position: relative;
+}
+#nav-items ul li:nth-of-type(2) a:hover{
+    text-decoration: underline;
+    color: lightblue;
+}
+#nav-items ul li:nth-of-type(2) a:hover .dropdown{
+    width: 80px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 20px;
+    left: -40px;
+}
+.dropdown li{
+    margin-bottom: 4px;
+}
+
+
+
+
+
+#front{
+    height: 75vh;
+    width: 100%;
+    /* background: #4a074f; */
+    background: #0c0b0b;
+    margin-top: -25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+#front #animation{
+    height: 100px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+#animation span::before{
+    content: "Build Mobile Apps";
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    animation-name: animate;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    padding-left: 10px;
+    font-size: xx-large;
+    color: rgb(49, 88, 171);
+}
+@keyframes animate {
+  
+    0% {
+        content: "Build Company Websites";
+        color:rgb(74, 159, 115);
+        margin-bottom: 0px;
+    }
+
+    60% {
+        content: "Build Company Designs";
+        color: rgb(16, 155, 155);
+        margin-bottom: 50px;
+    }
+
+}
+.plans{
+    background: #472f88;
+    color: white;
+    text-decoration: none;
+    border-radius: 15px;  
+    width: 200px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+.plans a{
+    font-size:x-large;
+    color: white;
+    text-decoration: none;
+}
+.plans:hover{
+    background: #27448e;
+
+}
+#body{
+    height: 150vh;
+    width: 100%;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.video-container{
+    width: 70%;
+    height: 55%;
+    background: #4a53b0;
+    border-radius: 10px;
+}
+.video-container video{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.text{
+    width: 70%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+}
+#body p{
+    color: #0c0b0b;
+    font-size: xx-large;
+    font-weight: '900';
+    text-align: center;
+}
+
+
+
+
+
+#footer{
+    width: 100%;
+    height: 500px;
+    margin-bottom: -0.5rem;
+    margin-top: 1rem;
+    /* background-color: rgb(4, 0, 12); */
+    /* background: #4a074f; */
+    background: #0c0b0b;
+    color: rgb(239, 236, 238);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    
+}
+.foot-div{
+    height: 300px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+  .foot-div .icons{
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .foot-div a{
+    color: rgb(231, 216, 226);
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 1px solid blue;
+    border-radius: 50%;
+  }
+  .fa{
+    width: 100%;
+    height: 100%;
+    padding-top: 6px;
+    padding-left: 9px;
+  }
+  .fa:hover{
+    color: white;
+  }
+
+  
+  .foot-div .text p{
+    font-size: 20px;
+  }
+  .foot-div .quote p{
+    font-size: 20px;
+    text-align: center;
+  }
+  .foot-div .quote{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
