@@ -1,434 +1,329 @@
-body{
-    color: white;
+body {
     font-family: sans-serif;
-    width: 100vw;
-    margin-left: 0rem;
-    margin-top: -0.5rem;
-    overflow-x: hidden;
+}
+.navbar{
+    background: #d6cbff;
 }
 
-#lines{
-    display: none;
+.container-fluid{
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
-.fa-search{
-    width: 30px;
-    height: 30px;
-}
-#header{
-    display: flex;
-    flex-direction: row;
-    height: 3rem;
+
+#front {
+    height: 90vh;
     width: 100%;
-    justify-content: center;
-    /* background: #48094e; */
-    background: #0c0b0b;
-    align-items:center;
-    padding-top: 1.3rem;
-    padding-bottom: 1rem;
-}
-#logo p{
-    color: white;
-    font-size: 22px;
-    font-family: 'Sofia';
-}
-#logo{
-    width: 30%;
-    padding-left: 2rem;
-}
-#nav-items{
-    width: 50%;
-    justify-content: center;
-    align-items: center;
-}
-ul{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-#search{
-    width: 20%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding-right: 6%;
-    padding-bottom: 6px;
-}
-.search-bar{
-    display: none;
-}
-#search-icon:hover .search-bar{
-   display: block;
-   background: #000;  
-}
-#search-icon:hover .search-bar{
-    /* display: block; */
-    background: whitesmoke;
-    border-radius: 30px;
-    display: flex;
-    flex-direction: row;
-    height: 40px;
-    width: 100%;
-    justify-content: center;
-}
-#input{
-    width: 90%;
-    /* background: orange; */
-}
-.search-bar input{
-    width: 100%;
-    height: 90%;
-    background: transparent;
-    border: 0px;
-    padding-left: 10px;
-}
-#icon{
-    width: 10%;
-    /* background: blue; */
-    padding-left: 5px;
-    padding-top: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #000;
-}
-#header #nav-items ul li{
-    display: inline;
-}
-.nav-links{
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-}
-.nav-links:hover{
-    text-decoration: underline;
-    color: lightblue;
-}
-
-.dropdown{
-    display: none;
-    
-}
-.hi{
-    position: relative;
-    display: inline-block;
-}
-.dropdown li{
-    color: black;
-    text-decoration: none;
-    margin-left: -20px;
-    margin-top: 5px;
-    display: block;
-
-}
-.dropdown{
-    position: absolute;
-    width: 127px;
-    top:20px;
-    left:-60px;
-    background-color: rgb(36, 40, 40);
-}
-.hi:hover .dropdown{
-    display: flex;
-    flex-direction: column;
-    
-}
-
-
-#nav-items ul li:nth-of-type(2) a{
-    color: white;
-    text-decoration: none;
-    display: inline;
-    position: relative;
-}
-#nav-items ul li:nth-of-type(2) a:hover{
-    text-decoration: underline;
-    color: lightblue;
-}
-#nav-items ul li:nth-of-type(2) a:hover .dropdown{
-    width: 80px;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 20px;
-    left: -40px;
-}
-.dropdown li{
-    margin-bottom: 4px;
-}
-
-
-
-
-
-#front{
-    height: 75vh;
-    width: 100%;
-    /* background: #4a074f; */
-    background: #0c0b0b;
-    margin-top: -25px;
+    background: #d6cbff;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-#center{
+#front h1{
+    font-size: 350%;
+    text-align: center;
+}
+
+#center {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
 }
-#front #animation{
+
+#front #animation {
     height: 100px;
     width: 100%;
     justify-content: center;
     align-items: center;
     display: flex;
+    margin-top: -1.5rem;
 }
-#animation span::before{
-    content: "Build Mobile Apps";
+
+#animation span::before {
+    content: "leader.";
     display: flex;
     justify-content: center;
     align-items: flex-end;
     animation-name: animate;
-    animation-duration: 7s;
+    animation-duration: 5s;
     animation-iteration-count: infinite;
     padding-left: 10px;
-    font-size: xx-large;
+    font-size: 170%;
+    font-family: monospace;
+    font-weight: bolder;
     color: rgb(49, 88, 171);
 }
+
 @keyframes animate {
-  
+
     0% {
-        content: "Build Company Websites";
-        color:rgb(74, 159, 115);
+        content: "tutor.";
+        color: rgb(74, 159, 115);
         margin-bottom: 0px;
     }
 
     60% {
-        content: "Build Company Designs";
+        content: "mentor.";
         color: rgb(16, 155, 155);
-        margin-bottom: 50px;
+        margin-bottom: 20px;
     }
 
 }
-.plans{
-    background: #472f88;
+
+.plans {
+    background: #d1bdbd;
     color: white;
     text-decoration: none;
-    border-radius: 15px;  
+    border-radius: 10px;
     width: 200px;
     height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;  
+    margin-top: 2rem;
 }
-.plans a{
-    font-size:x-large;
+
+.plans a {
+    font-size: x-large;
     color: white;
     text-decoration: none;
-}
-.plans:hover{
-    background: #27448e;
-
-}
-#body{
-    height: 150vh;
-    width: 100%;
-    background: rgb(255, 255, 255);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.video-container{
-    width: 70%;
-    height: 55%;
-    background: #4a53b0;
-    border-radius: 10px;
-}
-.video-container video{
     width: 100%;
     height: 100%;
-    border-radius: 10px;
+    font-weight: bold;
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.text1{
-    width: 70%;
-    height: 20%;
+
+.plans:hover {
+    background: #ad9b9b;
+
+}
+.plans:hover p{
+    color: white;
+}
+
+#aim{
+    width: 100%;
+    background: #e6e3e3;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#aim #left{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    padding: 40px;
+}
+#aim #left p{
+    font-size: xx-large;
+    font-weight: bolder;
+    text-align:start;
+}
+#aim #right{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+#aim #right img{
+    width: 530px;
+    margin-left: 2rem;
+    height: 450px;
+}
+
+#book{
+    width: 100%;
+    height: 100vh;
+    padding: 4rem;
+    background: #e6e3e3;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+#book p{
+    font-size: 170%;
+    font-weight: bolder;
+    text-align: center;
+}
+#book a{
+    background: #d1bdbd;
+    color: black;
+    text-decoration: none;
+    padding: 2px 40px;
     margin-top: 3rem;
+    padding-top: 15px;
+    border-radius: 10px;
+}
+#book a:hover{
+    background: #ad9b9b;
+}
+
+
+#body {
+    min-height: 104vh;
+    width: 100%;
+    margin-top: -13px;
+    background: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#body p:first-of-type{
+    font-size:xx-large;
+    font-weight: bolder;
+}
+#body .left{
+    width: 50%;
+    padding: 60px;
+}
+.left a{
+    font-size: larger;
+    text-decoration: none;
+}
+.left a:hover{
+    text-decoration: underline;
 }
 #body p{
     color: #0c0b0b;
-    font-size: xx-large;
-    font-weight: '900';
-    text-align: center;
+    font-size: large;
+    font-weight: 500;
+    text-align: start;
 }
-
-
-
-
-
-#footer{
-    width: 100%;
-    height: 300px;
-    margin-bottom: -0.5rem;
-    margin-top: 1rem;
-    background: #0c0b0b;
-    color: rgb(239, 236, 238);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    
+#body .right{
+    width: 50%;
+    overflow: hidden;
 }
-.foot-div{
+#body .right img{
     height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
-  }
-  .foot-div .icons{
-    height: 10%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-bottom: -3rem;
-  }
-  .quote, .text{
-    height: 45%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .foot-div a{
-    color: rgb(231, 216, 226);
-    width: 30px;
+    width: 149%;
+}
+
+
+.navbar{
+    border-bottom: 0.4px solid #bba9fb;
+}
+.dropdown-menu{
+    background: #d6cbff;
+}
+ul {
+    list-style-type: none;
+}
+.socials {
+    margin-left: -2.5rem;
+    margin-top: 4rem;
+}
+.icon {
+    margin-top: 4rem;
+}
+.icon a {
     height: 30px;
-    margin-left: 10px;
-    margin-right: 10px;
-    border: 1px solid blue;
-    border-radius: 50%;
-  }
-  .fa{
-    width: 100%;
-    height: 100%;
-    padding-top: 6px;
-    padding-left: 9px;
-  }
-  .fa:hover{
-    color: white;
-  }
-
-  
-  .foot-div .text p{
-    font-size: 20px;
-  }
-  .foot-div .quote p{
-    font-size: 20px;
-    text-align: center;
-  }
-  .foot-div .quote{
-    width: 90%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  #contact{
-    width: 100%;
-    height: 100px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
-  .con:first-of-type{
-    margin-right: 120px;
-    /* width: 200px; */
-  }
-  .con a{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    border: none;
+    padding: 10px 13px;
+    margin-left: 5px;
+    background: white;
+}
+.icon a:hover {
+    background: rgb(234, 228, 228);
+}
+.address {
+    margin-left: -2rem;
+}
+.service {
+    margin-left: -2rem;
+}
+.service a {
     text-decoration: none;
-  }
-  .con i{
-    margin-right: 10px;
-  }
-
-  @media screen and (max-width:750px) {
-    #header{
-        background: red;
-    }
-    #search{
-        width: 10%;
-    }
-    .video-container video{
-        width: 100%;
-        height: 100%;
-        border-radius: 10px;
-    }
-    .video-container{
-        width: 60%;
-        height: 35%;
-        background: #4a53b0;
-        border-radius: 10px;
-    }
-    #logo{
-        width: 30%;
-        display: flex;
-        align-items: flex-start;
-        justify-content: flex-start;
-    }
-    #nav-items{
-        width: 70%;
-    }
-  }
+    color: black;
+}
+.service a:hover {
+    color: rgb(124, 162, 219);
+}
+.col-md-3 {
+    margin: 3rem 0px;
+    padding-left: 30px;
+}
+.follow {
+    min-width: 250px;
+}
+.services {
+    padding-left: 5rem;
+}
+.footer{
+    margin-bottom: -1rem;
+    padding-top: 4rem;
+    background: #d6cbff;
+}
+.copyright{
+    padding-bottom: 3rem;
+}
 
 
-  @media screen and (max-width:500px) {
-    #header{
-        background: red;
+
+
+@media screen and (max-width:990px) {
+    .navbar-nav {
+        margin-left: 0px;
     }
-    #search{
-        display: none;
-    }
-    #nav-items{
-        display: none;
-    }
-    #logo{
-        width: 30%;
+    #aim{
         display: flex;
-        align-items: flex-start;
-        justify-content: flex-start;
-        background: orange;
-    }
-    #lines{
-        width: 70%;
-        background: pink;
-        display: flex;
-        justify-content: flex-end;
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
-        margin-right: 30px;
     }
-    .video-container video{
+    #aim #left{
         width: 100%;
-        height: 100%;
-        border-radius: 10px;
     }
-    .video-container{
-        width: 70%;
-        height: 25%;
-        background: #4a53b0;
-        border-radius: 10px;
+    #aim #right{
+        width: 100%;
+        display: flex;
+        justify-content: center;
     }
-    
-  }
+    #aim #right img{
+        width: 80%;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    #aim #left p{
+        text-align: center;
+    }
+    #body {
+        background: rgb(255, 255, 255);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #body .left{
+        width: 100%;
+    }
+    #body .right{
+        width: 80%;
+    }
+
+}
+
+
+@media screen and (max-width:450px) {
+    #body {
+        background: rgb(255, 255, 255);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #body .left{
+        width: 80%;
+    }
+    #body .right{
+        width: 60%;
+    }
+
+}

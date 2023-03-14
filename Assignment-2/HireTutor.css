@@ -1,0 +1,73 @@
+body{
+    overflow-x: hidden;
+}
+ul {
+    list-style-type: none;
+}
+
+.socials {
+    margin-left: -2.5rem;
+    margin-top: 4rem;
+}
+
+.icon {
+    margin-top: 4rem;
+}
+
+.icon a {
+    height: 30px;
+    padding: 10px 13px;
+    margin-left: 5px;
+    background: white;
+}
+
+.icon a:hover {
+    background: rgb(234, 228, 228);
+}
+
+.address {
+    margin-left: -2rem;
+}
+
+.service {
+    margin-left: -2rem;
+}
+
+.service a {
+    text-decoration: none;
+    color: white;
+}
+
+.service a:hover {
+    color: rgb(124, 162, 219);
+}
+
+.col-md-3 {
+    margin: 2rem 0px;
+    padding-left: 3rem;
+}
+
+.follow {
+    min-width: 280px;
+}
+
+.services {
+    padding-left: 3rem;
+}
+footer{
+    width: 100vw;
+}
+.footer{
+    margin-bottom: -2rem;
+    margin-left: -2rem;
+}
+.copyright{
+    padding-bottom: 3rem;
+}
+
+
+@media screen and (max-width:768px) {
+    .services {
+        padding-left: 3rem;
+    }
+}
