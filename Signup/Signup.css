@@ -1,11 +1,11 @@
 body{
-    background: black;
+    background: linear-gradient(#e6e3e3,#d7ccff, #d1bdbd);
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('ad.gif');
+    /* background-image: url('ad.gif');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
     font-family: sans-serif;
 }
 #loginform{
@@ -134,4 +134,10 @@ button{
 }
 .error{
     border: 2px solid red;
+}
+
+@media screen and (max-width:450px) {
+    #loginform{
+        width:330px
+    }
 }
