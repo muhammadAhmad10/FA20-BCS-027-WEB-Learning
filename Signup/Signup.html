@@ -24,19 +24,19 @@
         <hr />
         <div id="inputDiv" class="container">
             <div class="form-floating mb-3">
-                <input type="text" class="form-control input" id="floatingInput" placeholder="Muhammad">
+                <input type="text" name="fname" class="form-control input fname" id="floatingInput" placeholder="Muhammad">
                 <label for="floatingInput">First Name</label>
               </div>
               <div class="form-floating mb-3">
-                <input type="text" class="form-control input" id="floatingInput" placeholder="Ahmad">
+                <input type="text"name="lname" class="form-control input lname" id="floatingInput" placeholder="Ahmad">
                 <label for="floatingInput">Last Name</label>
               </div>
               <div class="form-floating mb-3">
-                <input type="email" class="form-control input" id="floatingInput" placeholder="name@example.com">
+                <input type="email"name="email" class="form-control input email" id="floatingInput" placeholder="name@example.com">
                 <label for="floatingInput">Email address</label>
               </div>
               <div class="form-floating">
-                <input type="password" class="form-control input" id="floatingPassword" placeholder="Password">
+                <input type="password" class="form-control input " id="floatingPassword" placeholder="Password">
                 <label for="floatingPassword">Password</label>
               </div>
         </div>
@@ -48,7 +48,7 @@
         <a href="#">Forgot password?</a>
     </div> -->
         <div id="buttonDiv"  class="d-grid gap-2">
-        <button class="btn btn-primary" type="button" onclick="passwordFocus()">Create an account</button>
+        <button class="btn btn-primary" type="button" onclick="handleSubmit()">Create an account</button>
     </div>
     <hr>
     <div id="signup" class="container">

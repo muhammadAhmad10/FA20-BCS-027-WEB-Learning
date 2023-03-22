@@ -64,41 +64,6 @@ body {
     color: white;
 }
 
-#book{
-    width: 100%;
-    min-height: 100vh;
-    padding: 4rem;
-    background: #e6e3e3;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-#tutors{
-    background: #000;
-    display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 10px;
-    column-count: 4;
-    margin-bottom: 6rem;
-    padding: 2rem;
-}
-#tutor{
-    background: rgb(203, 196, 196);
-    padding: 5px;
-    margin: 5px;
-    width: 160px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-}
-#tutor img{
-    width: 150px;
-    height: 150px;
-}
-
-
 
 .navbar{
     border-bottom: 0.4px solid #bba9fb;
@@ -173,3 +138,35 @@ ul {
 
 
 }
+
+
+
+
+#book{
+    width: 100%;
+    min-height: 100vh;
+    padding: 4rem;
+    background: #e6e3e3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#good{
+    background: #b58c8c;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#bad{
+    background: #e5c6c6;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
