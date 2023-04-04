@@ -9,10 +9,10 @@ body {
 .container-fluid{
     padding-top: 10px;
     padding-bottom: 10px;
-}
+} 
 
 #front {
-    height: 90vh;
+    height: 0vh;
     width: 100%;
     background: #d6cbff;
     display: flex;
@@ -145,13 +145,13 @@ ul {
 
 #book{
     width: 100%;
-    min-height: 100vh;
+    min-height: 86.5vh;
     padding: 4rem;
-    background: #e6e3e3;
+    background: #e3e4e6;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center;
+    align-items: center; */
 }
 
 #good{

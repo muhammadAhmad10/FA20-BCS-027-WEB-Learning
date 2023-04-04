@@ -1,0 +1,13 @@
+body{
+    background-image: url('./h3.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.dropdown-menu{
+    width:500px;
+
+}
