@@ -1,45 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="HeartDiseasePrediction.css">
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Sofia"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
 
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="HeartDiseasePrediction.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
 </head>
-<body>
+
+<body class="text-light">
+  <div class="container-fluid pt-5 d-flex justify-content-center align-content-center">
     <h1>Heart Disease Prediction</h1>
-    <div id="purpose">
-        The purpose of this project is to predict that whether the patient has heart disease or not
+
+  </div>
+
+  <div class="container-fluid d-flex" id="main">
+    <div class="container-fluid ms-4 me-2 " id="basic-terms">
+      <h2>Purpose</h2>
+      <p class="mb-4">
+        The purpose of this project is to predict that whether the patient has
+        heart disease or not
+      </p>
+      <div class="container ">
+        <h5>Input and output</h5>
+        <p>Input: Person</p>
+        <p>Output: Prediction (Have Disease / Not Have Disease)</p>
+      </div>
+      <div class="container ">
+        <h5>Representation of Input (Person)</h5>
+        <p>Input (Person) is Represented as 4 Input Attributes</p>
+        <p>Input Attributes 01- Age</p>
+        <p>Possible Value: Any positive integer between 1 to 100</p>
+        <div class="container">
+          <p>Input Attributes 02 - Gender</p>
+          <p>Possible Values</p>
+          <ul>
+            <li>Male</li>
+            <li>Female</li>
+          </ul>
+        </div>
+        <div class="container">
+          <p>Input Attributes 03 - Chest Pain</p>
+          <p>Possible Values</p>
+          <ul>
+            <li>0</li>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+          </ul>
+        </div>
+        <div class="container">
+          <p>Input Attributes 04 - Chest Pain</p>
+          <p>Possible Value: Any positive integer between 0 to 220</p>
+
+        </div>
+      </div>
+      <div class="container">
+
+        <h5>Representation of Output (Disease)</h5>
+        <p>Output is Represented as a single Output Attributes
+        </p>
+        <ul>
+          <li>Have Disease</li>
+          <li>Not Have Disease</li>
+        </ul>
+      </div>
+
+      <div class="container">
+        <h5>Example - Input and Output</h5>
+        <h6>Input (Person):</h6>
+        <p id="head">Age:</p>
+        <p class="ms-5" id="value">58</p>
+        <p id="head">Gender:</p>
+        <p class="ms-5" id="value">Female</p>
+        <p id="head">Chest Pain:</p>
+        <p class="ms-5" id="value">0</p>
+        <p id="head">Maximum Heart Rate Achieved:</p>
+        <p class="ms-5" id="value">122</p>
+        <p><strong>Output:</strong> Have Disease</p>
+      </div>
+
     </div>
-    <div id="inputform">
-        <form action="">
-            <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Select an option
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="#" onclick="updateDropdownText('Option 1')">Option 1</a>
-                  <a class="dropdown-item" href="#" onclick="updateDropdownText('Option 2')">Option 2</a>
-                  <a class="dropdown-item" href="#" onclick="updateDropdownText('Option 3')">Option 3</a>
-                </div>
-            </div>
-              
-        </form>
+    <div class="container-fluid  pt-0 form" id="inputform">
+      <h2>Person Input</h2>
+      <form action="">
+        <div class="col-12">
+          <label for="inputAddress" class="form-label">Age</label>
+          <input class="form-control form-control-lg" type="text" placeholder="45"
+            aria-label=".form-control-lg example" />
+        </div>
+        <div class="col-12">
+          <label for="inputAddress2" class="form-label ">Gender</label>
+          <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+            <option selected>Select Gender</option>
+            <option value="1">Male</option>
+            <option value="0">Female</option>
+          </select>
+        </div>
+        <div class="col-12">
+          <label for="inputAddress2" class="form-label ">Chest Pain</label>
+          <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+            <option selected>Select Chest Pain</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">3</option>
+            <option value="3">4</option>
+          </select>
+        </div>
+        <div class="col-12">
+          <label for="inputAddress" class="form-label ">Maximum Heart Rate Achieved</label>
+          <input class="form-control form-control-lg" type="text" placeholder="89"
+            aria-label=".form-control-lg example" />
+        </div>
+      </form>
+      <div class="mt-5 container-fluid" id="response">
+        <p><strong class="st1">Age: </strong>sdaf</p>
+        <p><strong class="st2">Gender: </strong>asd</p>
+        <p><strong class="st3">Chest Pain: </strong>fdf</p>
+        <p><strong class="st4">Max. Heart Rate: </strong>sfas</p>
+        <p class="mt-5"><strong class="me-5">Prediction: </strong>Have Disease</p>
+      </div>
     </div>
+  </div>
 </body>
+
 </html>
