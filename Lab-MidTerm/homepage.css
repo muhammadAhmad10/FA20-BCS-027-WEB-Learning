@@ -127,3 +127,23 @@ body{
 #footer p{
     font-size: 14px;
 }
+.fa-facebook{
+    background: blue;
+    color: white;
+    padding: 7px 10px;
+}
+.fa-instagram{
+    background: rgb(121, 6, 93);
+    color: white;
+    padding: 7px 10px;
+}
+.fa-linkedin{
+    background: rgb(62, 134, 235);
+    color: white;
+    padding: 7px 10px;
+}
+.fa-youtube{
+    background: red;
+    color: white;
+    padding: 7px 10px;
+}
