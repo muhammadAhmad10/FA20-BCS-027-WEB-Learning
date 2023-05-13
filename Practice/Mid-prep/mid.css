@@ -1,0 +1,21 @@
+#j{
+    background: #2d69b2;
+}
+
+.success{
+    border: green 2px solid;
+}
+.failure{
+    border: red 2px solid;
+}
+#j{
+    min-height: 100vh;
+}
+
+
+.box{
+    background-color: #000;
+    width: 100px;
+    height: 100px;
+    opacity: 0.8;
+}
