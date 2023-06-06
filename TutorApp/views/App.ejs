@@ -29,81 +29,7 @@
 
     <title>Document</title>
     </head>
-  <body>
-     <nav class="navbar navbar-expand-lg">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="/"
-          >Tutor Finder</a
-        >
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a
-                class="nav-link active"
-                aria-current="page"
-                href="Login"
-                >Login</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="HireTutor"
-                >Hire Tutor</a
-              >
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Projects
-              </a>
-              <ul class="dropdown-menu">
-                <li>
-                  <a class="dropdown-item" href="App">App Development</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="Web">Web Development</a>
-                </li>
-                <li>
-                  <hr class="dropdown-divider" />
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">Machine Learning</a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled">Disabled</a>
-            </li>
-          </ul>
-          <form class="d-flex" role="search">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-success" type="submit">
-              Search
-            </button>
-          </form>
-        </div>
-      </div>
-    </nav> 
+  <body> 
 
     <div id="front">
       <div id="center">
@@ -114,7 +40,7 @@
       </div>
     </div>
 
-    <div id="book">
+    <div class="container-fluid h-auto" id="book">
       <div class="container-fluid d-flex justify-content-center align-content-center" id="top">
         <button class="btn btn-primary" data-bs-toggle="modal" data-targer="#exampleModal" data-bs-target="#exampleModal" id="Add-recipie" data-bs-whatever="@getbootstrap">Add new recipie</button>
         <button id="show-recipie" class="btn btn-secondary">Show recipies</button>
@@ -130,18 +56,6 @@
             </tr>
           </thead>
           <tbody class="table-primary" id="table-body">
-            <!-- <tr id="row">
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-              <td><button id="delete" class="btn btn-danger me-3"><i class="fa fa-remove"></i></button><button id="edit" class="btn btn-warning" data-bs-toggle="modal" data-targer="#exampleModal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap"><i class="fa fa-pencil"></i></button></td>
-            </tr>
-            <tr id="row">
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-              <td><button id="delete" class="btn btn-danger me-3"><i class="fa fa-remove"></i></button><button id="edit" class="btn btn-warning" data-bs-toggle="modal" data-targer="#exampleModal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap"><i class="fa fa-pencil"></i></button></td>
-            </tr> -->
             
           </tbody>
         </table>

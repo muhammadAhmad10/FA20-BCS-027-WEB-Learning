@@ -2,24 +2,26 @@ body {
     font-family: sans-serif;
 
 }
-.navbar{
+
+.navbar {
     background: #d6cbff;
 }
 
-.container-fluid{
+.container-fluid {
     padding-top: 10px;
     padding-bottom: 10px;
-} 
+}
 
 #front {
-    height: 0vh;
+    height: 50vh;
     width: 100%;
     background: #d6cbff;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-#front h1{
+
+#front h1 {
     font-size: 350%;
     text-align: center;
 }
@@ -31,6 +33,7 @@ body {
     align-items: center;
     width: 100%;
 }
+
 
 
 
@@ -61,65 +64,81 @@ body {
     background: #ad9b9b;
 
 }
-.plans:hover p{
+
+.plans:hover p {
     color: white;
 }
 
 
-.navbar{
+.navbar {
     border-bottom: 0.4px solid #bba9fb;
 }
-.dropdown-menu{
+
+.dropdown-menu {
     background: #d6cbff;
 }
+
 ul {
     list-style-type: none;
 }
+
 .socials {
     margin-left: -2.5rem;
     margin-top: 4rem;
 }
+
 .icon {
     margin-top: 4rem;
 }
+
 .icon a {
     height: 30px;
     padding: 10px 13px;
     margin-left: 5px;
     background: white;
 }
+
 .icon a:hover {
     background: rgb(234, 228, 228);
 }
+
 .address {
     margin-left: -2rem;
 }
+
 .service {
     margin-left: -2rem;
 }
+
 .service a {
     text-decoration: none;
     color: black;
 }
+
 .service a:hover {
     color: rgb(124, 162, 219);
 }
+
 .col-md-3 {
     margin: 3rem 0px;
     padding-left: 30px;
 }
+
 .follow {
     min-width: 250px;
 }
+
 .services {
     padding-left: 5rem;
 }
-.footer{
+
+.footer {
     margin-bottom: -1rem;
     padding-top: 4rem;
     background: #d6cbff;
 }
-.copyright{
+
+.copyright {
     padding-bottom: 3rem;
 }
 
@@ -130,20 +149,17 @@ ul {
     .navbar-nav {
         margin-left: 0px;
     }
-    
-
-}
-
-
-@media screen and (max-width:450px) {
 
 
 }
 
 
+@media screen and (max-width:450px) {}
 
 
-#book{
+
+
+#book {
     width: 100%;
     min-height: 86.5vh;
     padding: 4rem;
@@ -154,7 +170,7 @@ ul {
     align-items: center; */
 }
 
-#good{
+#good {
     background: #b58c8c;
     width: 100%;
     display: flex;
@@ -162,7 +178,8 @@ ul {
     justify-content: center;
     align-items: center;
 }
-#bad{
+
+#bad {
     background: #e5c6c6;
     width: 100%;
     display: flex;
@@ -170,4 +187,3 @@ ul {
     justify-content: center;
     align-items: center;
 }
-

@@ -1,0 +1,76 @@
+<link rel="stylesheet" href="/css/bookStore.css" />
+<div class="container-fluid header">
+  <div class="row">
+    <div class="col-12">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4">Book Store</h1>
+          <p class="lead">Buy books from here</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="search" class="container-fluid">
+  <div class="row">
+    <div class="col-6">
+      <div class="container-fluid ms-5">
+        <a class="btn btn-primary" href="add">Add Book</a>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="input-group mt-2">
+        <input
+          type="text"
+          class="form-control me-5"
+          placeholder="Search Book"
+          aria-label="Recipient's username"
+          aria-describedby="button-addon2"
+        />
+        <button
+          class="btn btn-outline-secondary me-5"
+          type="button"
+          id="button-addon2"
+        >
+          Search
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="container-fluid d-flex flex-wrap justify-content-center">
+    <% books.forEach(book => { %>
+    <div class="card" style="width: 20rem">
+      <img id="image" src="<%= book.image %>" class="card-img-top" alt="pic" />
+      <div class="card-body">
+        <h5 class="card-title"><b><%= book.name %></b></h5>
+        <p class="card-text"><%= book.author %></p>
+        <p class="card-text">PKR <%= book.price %></p>
+        <div class="container-fluid">
+          <input
+            class="btn btn-primary"
+            type="button"
+            value="Add to Cart"
+            onclick="location.href='/api/books/cart/<%= book._id %>'"
+          />
+          <input
+            class="btn btn-primary"
+            type="button"
+            value="Edit"
+            onclick="location.href='/api/books/edit/<%= book._id %>'"
+          />
+          <input
+            class="btn btn-primary"
+            type="button"
+            value="Delete"
+            onclick="location.href='/api/books/delete/<%= book._id %>'"
+          />
+        </div>
+      </div>
+    </div>
+    <% }) %>
+  </div>
+</div>

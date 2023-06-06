@@ -1,0 +1,12 @@
+<h1>All tutors</h1>
+<% tutors.forEach(tutor => { %>
+<div>
+  <h3><%= tutor._id %></h3>
+  <h3><%= tutor.name %></h3>
+  <p><%= tutor.bio %></p>
+  <p><%= tutor.email %></p>
+  <p><%= tutor.subject1 %></p>
+  <p><%= tutor.image %></p>
+  <!-- <button class="btn btn-danger" onclick=""></button> -->
+</div>
+<% }) %>

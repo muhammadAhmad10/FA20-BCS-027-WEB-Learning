@@ -1,0 +1,16 @@
+img {
+    width: 280px;
+    height: 320px;
+}
+
+.card {
+    margin: 5px;
+    background: rgb(237, 232, 232);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 2px;
+}
+
+#search,
+.header {
+    background: rgb(234, 240, 247);
+}

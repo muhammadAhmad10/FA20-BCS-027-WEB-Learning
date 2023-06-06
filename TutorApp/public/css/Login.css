@@ -1,14 +1,18 @@
-body{
-    background: linear-gradient(#e6e3e3,#d7ccff, #d1bdbd);
+body {
+    background: linear-gradient(#e6e3e3, #d7ccff, #d1bdbd);
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    min-height: 130vh;
+    /* justify-content: center;
+    align-items: center; */
     /* background-image: url('ad.gif');
     background-repeat: no-repeat;
     background-size: cover; */
     font-family: sans-serif;
+
 }
-#loginform{
+
+#loginform {
     background: white;
     width: 400px;
     height: 70%;
@@ -17,20 +21,24 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    align-self: center;
     box-shadow: 0px 4px 8px rgba(252, 252, 252, 0.5);
 }
-h1{
+
+h1 {
     margin-left: 17px;
     margin-top: 20px;
     font-weight: bold;
     align-self: self-start;
 }
-hr{
+
+hr {
     width: 90%;
     display: flex;
     align-self: center;
 }
-#google{
+
+#google {
     width: 90%;
     height: 45px;
     margin: 2px 0px;
@@ -40,17 +48,20 @@ hr{
     align-items: center;
     justify-content: center;
 }
-#google img{
+
+#google img {
     width: 20px;
     height: 20px;
     margin-right: 2px;
 }
-#google p{
+
+#google p {
     padding-top: 12px;
     padding-left: 2px;
     font-weight: 600;
 }
-#inputDiv{
+
+#inputDiv {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -59,44 +70,50 @@ hr{
     padding-bottom: 0px;
     margin-top: -1rem;
 }
-input{
+
+input {
     /* height: 20px; */
     width: 90%;
     margin-bottom: 10px;
 }
-#recapta{
+
+#recapta {
     background: yellow;
     height: 50px;
     align-self: self-start;
 }
-#passwordDiv{
+
+#passwordDiv {
     width: 100%;
     display: flex;
     justify-content: flex-end;
     padding-right: 1.2rem;
 }
-#passwordDiv p{ 
+
+#passwordDiv p {
     font-size: 16px;
     color: blue;
 }
 
-#buttonDiv{
+#buttonDiv {
     width: 100%;
     display: flex;
     padding: 1.2rem;
 }
 
-button{
+button {
     width: 100%;
     height: 45px;
 }
-#signup{
+
+#signup {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0px 1.2rem 1.2rem 1.2rem;
 }
-#signup div{
+
+#signup div {
     border: 2px solid blue;
     border-radius: 5px;
     width: 40%;
@@ -105,7 +122,8 @@ button{
     justify-content: center;
     align-items: center;
 }
-#signup div a{
+
+#signup div a {
     width: 100%;
     height: 100%;
     text-align: center;
@@ -113,23 +131,26 @@ button{
     text-decoration: none;
     color: black;
 }
-#signup p{
+
+#signup p {
     margin-top: 10px;
     font-size: 14px;
 }
-#signup div a:hover{
+
+#signup div a:hover {
     background: rgb(241, 238, 238);
 }
 
-.success{
+.success {
     border: 2px solid green;
 }
-.error{
+
+.error {
     border: 2px solid red;
 }
 
 @media screen and (max-width:450px) {
-    #loginform{
-        width:330px
+    #loginform {
+        width: 330px
     }
 }
