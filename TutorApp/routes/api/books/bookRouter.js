@@ -1,5 +1,16 @@
 const express = require("express");
 const router = express.Router();
+const multer = require("multer");
+const admin = require("firebase-admin");
+const serviceAccount = require("../../../serviceAccountKey.json");
+
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
+  storageBucket: "muhammad-ahmad-39722.appspot.com",
+});
+
+const bucket = admin.storage().bucket();
+const upload = multer({ storage: multer.memoryStorage() });
 
 const Book = require("../../../models/book");
 
@@ -9,34 +20,53 @@ router.get("/add", (req, res) => {
   res.render("book-store/add-book");
 });
 
-//Post a book
-router.post("/add", async (req, res) => {
+router.post("/add", upload.single("image"), async (req, res) => {
   const { name, author, price } = req.body;
-  console.log(name, author, price);
+  const file = req.file;
 
-  const book = new Book({
-    name: name,
-    author: author,
-    price: price,
+  if (!file) {
+    return res.status(400).send("No file uploaded");
+  }
+
+  const filename = Date.now() + "_" + file.originalname;
+  const filepath = `books/${filename}`;
+
+  const bucketFile = bucket.file(filepath);
+
+  const stream = bucketFile.createWriteStream({
+    resumable: false,
+    metadata: {
+      metadata: {
+        firebaseStorageDownloadTokens: Date.now(),
+      },
+    },
   });
-  console.log(book);
 
-  const savedBook = await book.save();
-  // res.redirect("books");
+  stream.on("finish", async () => {
+    const imageUrl = `https://firebasestorage.googleapis.com/v0/b/${
+      bucket.name
+    }/o/${encodeURIComponent(filepath)}?alt=media&token=${
+      bucketFile.metadata.metadata.firebaseStorageDownloadTokens
+    }`;
+
+    const book = new Book({
+      name: name,
+      author: author,
+      price: price,
+      image: imageUrl,
+    });
+
+    try {
+      const savedBook = await book.save();
+      res.redirect("books"); // or any other desired route
+    } catch (error) {
+      console.error("Error saving book:", error);
+      res.status(500).send("Error saving book");
+    }
+  });
+
+  stream.end(file.buffer);
 });
-
-// router.post("/add", async (req, res) => {
-//   const b = req.body;
-//   console.log(b);
-//   const book = new Book({
-//     title: req.body.title,
-//     auther: req.body.auther,
-//     price: req.body.price,
-//   });
-//   console.log(book);
-//   const savedBook = await book.save();
-//   res.redirect("books");
-// });
 
 //Get all books from database on booKStore page
 router.get("/books", async (req, res) => {
@@ -45,9 +75,10 @@ router.get("/books", async (req, res) => {
 });
 
 // Get all books
-router.get("/", async (req, res) => {
+router.get("/bookCollection", async (req, res) => {
   const books = await Book.find();
   res.send(books);
+  //http://localhost:3000/api/books/bookCollection
 });
 
 //Get single book

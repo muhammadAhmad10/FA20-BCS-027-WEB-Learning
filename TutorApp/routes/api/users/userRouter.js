@@ -6,7 +6,7 @@ const User = require("../../../models/user");
 router.get("/users", async (req, res) => {
   const users = await User.find();
   res.send(users);
-  //get users on "/api/users/users" route
+  //get users on "http://localhost:3000/api/users/users" route
 });
 
 //Get add user page
