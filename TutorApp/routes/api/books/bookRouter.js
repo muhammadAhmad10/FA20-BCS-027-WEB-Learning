@@ -74,12 +74,12 @@ router.get("/books", async (req, res) => {
   res.render("book-store/bookStore", { books });
 });
 
-// Get all books
-router.get("/bookCollection", async (req, res) => {
-  const books = await Book.find();
-  res.send(books);
-  //http://localhost:3000/api/books/bookCollection
-});
+// // Get all books
+// router.get("/bookCollection", async (req, res) => {
+//   const books = await Book.find();
+//   res.send(books);
+//   //http://localhost:3000/api/books/bookCollection
+// });
 
 //Get single book
 router.get("/:id", async (req, res) => {
@@ -89,17 +89,39 @@ router.get("/:id", async (req, res) => {
 });
 
 //Edit a book
-router.put("/:id", async (req, res) => {
-  const book = await findByIdAndUpdate(req.params.id, Book);
+//get the book to edit
+router.get("/edit/:id", async (req, res) => {
+  const book = await Book.findById(req.params.id);
   if (!book) return res.status(404).send("Book not found");
-  res.send(book);
+  res.render("book-store/edit-book", { book });
 });
 
-//Delete a book
-router.delete("/:id", async (req, res) => {
-  const book = await findByIdAndDelete(req.params.id);
+//post the book after modification
+router.post("/edit/:id", async (req, res) => {
+  const { name, author, price } = req.body;
+  const book = await Book.findById(req.params.id);
   if (!book) return res.status(404).send("Book not found");
-  res.send(book);
+  book.name = name;
+  book.author = author;
+  book.price = price;
+  await book.save();
+  res.redirect("/api/books/books");
+});
+
+// Delete a book
+router.get("/delete/:id", async (req, res) => {
+  console.log("going to delete book");
+  const book = await Book.findByIdAndDelete(req.params.id);
+  if (!book) return res.status(404).send("Book not found");
+  console.log(book);
+  res.redirect("/api/books/books");
+});
+
+//Add book to cart
+router.get("/cart/:id", async (req, res) => {
+  const book = await Book.findById(req.params.id);
+  if (!book) return res.status(404).send("Book not found");
+  res.render("book-store/cart", { book });
 });
 
 module.exports = router;

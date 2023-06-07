@@ -14,8 +14,11 @@
 
 <div id="search" class="container-fluid">
   <div class="row">
-    <div class="col-6">
-      <div class="container-fluid ms-5">
+    <div class="col-6 d-flex flex-row">
+      <div class="container-fluid">
+        <a class="btn btn-primary" href="cart">Check Cart</a>
+      </div>
+      <div class="container-fluid">
         <a class="btn btn-primary" href="add">Add Book</a>
       </div>
     </div>
@@ -62,12 +65,9 @@
             value="Edit"
             onclick="location.href='/api/books/edit/<%= book._id %>'"
           />
-          <input
-            class="btn btn-primary"
-            type="button"
-            value="Delete"
-            onclick="location.href='/api/books/delete/<%= book._id %>'"
-          />
+          <a class="btn btn-danger" href="/api/books/delete/<%=book._id%>"
+            >Delete</a
+          >
         </div>
       </div>
     </div>
