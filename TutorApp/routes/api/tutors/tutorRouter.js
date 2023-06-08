@@ -60,11 +60,11 @@ router.get("/deleteTutor/:id", async (req, res) => {
   res.redirect("/api/tutors/list");
 });
 
-// // Get a tutor by id
-// router.get("/:id", async (req, res) => {
-//   const tutor = await Tutor.findById(req.params.id);
-//   if (!tutor) return res.status(404).send("Tutor not found");
-//   res.send(tutor);
-// });
+// Get a tutor by id
+router.get("details/:id", async (req, res) => {
+  const tutor = await Tutor.findById(req.params.id);
+  if (!tutor) return res.status(404).send("Tutor not found");
+  res.render("tutor/details", { tutor });
+});
 
 module.exports = router;

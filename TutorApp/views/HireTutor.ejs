@@ -63,7 +63,9 @@
           <%= tutor.subject1 %> | <%= tutor.subject2 %>
         </p>
         <p class="card-text"><%= tutor.bio %></p>
-        <a href="/api/tutors/details" class="btn btn-primary">Details</a>
+        <a href="/api/tutors/details/<%= tutor._id%>" class="btn btn-primary"
+          >Details</a
+        >
         <a href="/api/tutors/editTutor/<%= tutor._id%>" class="btn btn-primary"
           >Edit</a
         >

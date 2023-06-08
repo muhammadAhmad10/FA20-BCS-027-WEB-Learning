@@ -1,0 +1,67 @@
+<link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+/>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<link rel="stylesheet" href="/css/final.css" />
+<script>
+  $(document).ready(function () {
+    $("#show").on("click", function () {
+      $.ajax({
+        url: "http://localhost:3000/api/products",
+        type: "GET",
+        success: function (data) {
+          data.forEach((data) => {
+            $("#jquery").append(`<tr>
+                <td class="text-light">${data._id}</td>
+            <td class="text-light">${data.title}</td>
+            <td class="text-light">${data.color}</td>
+            <td class="text-light">${data.price}</td>
+            </tr>`);
+          });
+        },
+      });
+    });
+  });
+</script>
+
+<div id="main" class="container-fluid mt-5 w-75">
+  <h1>Product List</h1>
+  <a class="btn btn-primary" href="/">Add Product</a>
+  <button class="btn btn-primary" id="show">Show Products With JQuery</button>
+  <table class="table table-striped mt-3">
+    <thead>
+      <tr class="text-light">
+        <th scope="col">Title</th>
+        <th scope="col">Color</th>
+        <th scope="col">Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% products.forEach(product => { %>
+      <tr>
+        <td class="align-middle text-light"><%= product.title %></td>
+        <td class="align-middle text-light"><%= product.color %></td>
+        <td class="align-middle text-light"><%= product.price %></td>
+      </tr>
+
+      <% }) %>
+    </tbody>
+  </table>
+</div>
+
+<div id="h" class="container-fluid mt-5 w-75">
+  <h1>Product List Using JQuery</h1>
+  <table class="table table-striped">
+    <thead>
+      <tr class="text-light">
+        <th scope="col">ID</th>
+        <th scope="col">Title</th>
+        <th scope="col">Color</th>
+        <th scope="col">Price</th>
+      </tr>
+    </thead>
+    <tbody id="jquery"></tbody>
+  </table>
+</div>
