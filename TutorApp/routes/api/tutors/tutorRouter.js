@@ -19,6 +19,7 @@ router.get("/list1", async (req, res) => {
 //create tutor
 router.get("/addTutor", async (req, res) => {
   res.render("tutor/addTutor");
+  console.log("tutor added");
 });
 router.post("/addTutor", async (req, res) => {
   const { name, email, subject1, subject2, bio } = req.body;
