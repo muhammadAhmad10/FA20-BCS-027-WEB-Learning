@@ -10,27 +10,27 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 app.use(ejslayout);
 
+//session setting
+const session = require("express-session");
+app.use(
+  session({
+    secret: "My Secret String",
+    cookie: { maxAge: 60000 },
+    resave: true,
+    saveUninitialized: true,
+  })
+);
+
 // API Routes
 app.use("/api/tutors", require("./routes/api/tutors/tutorRouter"));
 app.use("/api/students", require("./routes/api/students/studentRouter"));
 app.use("/api/books", require("./routes/api/books/bookRouter"));
 app.use("/api/users", require("./routes/api/users/userRouter"));
-// app.use("/api/books-operations", require("./routes/api/books-operations"));
-// app.use("/", require("./routes/api/tutors/tutorRouter"));
-// View Routes
 
 app.get("/", (req, res) => {
   res.render("LandingPage");
 });
-// app.get("/login", (req, res) => {
-//   const email = req.body.email;
-//   const password = req.body.password;
-//   console.log("email and password in app.js: ", email, password);
-//   res.render("Login");
-// });
-// app.get("/Signup", (req, res) => {
-//   res.render("Signup");
-// });
+
 app.get("/Web", (req, res) => {
   res.render("Web");
 });

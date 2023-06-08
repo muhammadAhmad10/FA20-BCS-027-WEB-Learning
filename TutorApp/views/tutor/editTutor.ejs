@@ -1,0 +1,62 @@
+<div class="container-fluid">
+  <div class="container-fluid w-50">
+    <form class="form" method="POST" action="">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          name="name"
+          value="<%= tutor.name %>"
+          placeholder="Enter name"
+        />
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input
+          type="text"
+          class="form-control"
+          id="email"
+          name="email"
+          value="<%= tutor.email %>"
+          placeholder="Enter email"
+        />
+      </div>
+      <div class="form-group">
+        <label for="subject1">Subject1</label>
+        <input
+          type="text"
+          class="form-control"
+          id="subject1"
+          name="subject1"
+          value="<%= tutor.subject1 %>"
+          placeholder="Enter subject1"
+        />
+      </div>
+      <div class="form-group">
+        <label for="subject2">Subject2</label>
+        <input
+          type="text"
+          class="form-control"
+          id="subject2"
+          name="subject2"
+          value="<%= tutor.subject2 %>"
+          placeholder="Enter subject2"
+        />
+      </div>
+      <div class="form-group">
+        <label for="bio">Bio</label>
+        <input
+          type="text"
+          class="form-control"
+          id="bio"
+          name="bio"
+          value="<%= tutor.bio %>"
+          placeholder="Enter bio"
+        />
+      </div>
+      <button type="submit" class="btn btn-primary mt-3">Submit</button>
+    </form>
+  </div>
+</div>

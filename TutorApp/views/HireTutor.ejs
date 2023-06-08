@@ -18,6 +18,7 @@
 </div>
 
 <div id="book container-fluid">
+  <a class="btn btn-primary" href="/api/tutors/addTutor">Add Tutor</a>
   <div class="tutors container-fluid d-flex flex-wrap justify-content-center">
     <!-- <div class="card" style="width: 18rem">
       <img src="/images/profile-pic.png" class="card-img-top" alt="pic" />
@@ -62,7 +63,13 @@
           <%= tutor.subject1 %> | <%= tutor.subject2 %>
         </p>
         <p class="card-text"><%= tutor.bio %></p>
-        <a href="#" class="btn btn-primary">Details</a>
+        <a href="/api/tutors/details" class="btn btn-primary">Details</a>
+        <a href="/api/tutors/editTutor/<%= tutor._id%>" class="btn btn-primary"
+          >Edit</a
+        >
+        <a href="/api/tutors/deleteTutor/<%= tutor._id%>" class="btn btn-danger"
+          >Delete</a
+        >
       </div>
     </div>
     <% }) %>
