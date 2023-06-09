@@ -117,11 +117,45 @@ router.get("/delete/:id", async (req, res) => {
   res.redirect("/api/books/books");
 });
 
-//Add book to cart
-router.get("/cart/:id", async (req, res) => {
-  const book = await Book.findById(req.params.id);
-  if (!book) return res.status(404).send("Book not found");
-  res.render("book-store/cart", { book });
-});
+// //Add book to cart
+// router.get("/cart/:id", async (req, res) => {
+//   const book = await Book.findById(req.params.id);
+//   if (!book) return res.status(404).send("Book not found");
+//   let cart = req.cookies.cart || [];
+
+//   // Add item to cart
+//   cart.push(book);
+//   console.log("book: ", book);
+//   console.log("cart: ", cart);
+
+//   // Store updated cart in cookie
+//   res.cookie("cart", cart);
+
+//   // res.render("book-store/cart", { book });
+// });
+
+// // Remove item from cart
+// // router.get("/remove-from-cart/:itemId", (req, res) => {
+// //   const { itemId } = req.params;
+
+// //   // Retrieve cart from cookie
+// //   let cart = req.cookies.cart || [];
+
+// //   // Remove item from cart
+// //   cart = cart.filter((item) => item !== itemId);
+
+// //   // Store updated cart in cookie
+// //   res.cookie("cart", cart);
+
+// //   res.send("Item removed from cart");
+// // });
+
+// // // Display cart items
+// // router.get("/cart", (req, res) => {
+// //   // Retrieve cart from cookie
+// //   const cart = req.cookies.cart || [];
+
+// //   res.send(`Cart Items: ${cart}`);
+// // });
 
 module.exports = router;

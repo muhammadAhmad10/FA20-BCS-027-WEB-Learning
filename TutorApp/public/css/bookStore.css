@@ -14,3 +14,96 @@ img {
 .header {
     background: rgb(234, 240, 247);
 }
+
+.navbar {
+    border-bottom: 0.4px solid #bba9fb;
+}
+
+.dropdown-menu {
+    background: #d6cbff;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.socials {
+    margin-left: -2.5rem;
+    margin-top: 4rem;
+}
+
+.icon {
+    margin-top: 4rem;
+}
+
+.icon a {
+    height: 30px;
+    padding: 10px 13px;
+    margin-left: 5px;
+    background: white;
+}
+
+.icon a:hover {
+    background: rgb(234, 228, 228);
+}
+
+.address {
+    margin-left: -2rem;
+}
+
+.service {
+    margin-left: -2rem;
+}
+
+.service a {
+    text-decoration: none;
+    color: black;
+}
+
+.service a:hover {
+    color: rgb(124, 162, 219);
+}
+
+.col-md-3 {
+    margin: 3rem 0px;
+    padding-left: 30px;
+}
+
+.follow {
+    min-width: 250px;
+}
+
+.services {
+    padding-left: 5rem;
+}
+
+.footer {
+    margin-bottom: -1rem;
+    padding-top: 4rem;
+    background: #d6cbff;
+}
+
+.copyright {
+    padding-bottom: 3rem;
+}
+
+
+.navbar {
+    background: #d6cbff;
+}
+
+.container-fluid {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+@media screen and (max-width:990px) {
+    .navbar-nav {
+        margin-left: 0px;
+    }
+
+
+}
+
+
+@media screen and (max-width:450px) {}
