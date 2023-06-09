@@ -24,7 +24,7 @@ app.use(
 );
 
 // API Routes
-// app.use(require("./middlewares/siteSettings"));
+app.use(require("./middlewares/sessionAuth"));
 app.use("/api/tutors", require("./routes/api/tutors/tutorRouter"));
 app.use("/api/students", require("./routes/api/students/studentRouter"));
 app.use("/api/books", require("./routes/api/books/bookRouter"));

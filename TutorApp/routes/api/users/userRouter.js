@@ -54,10 +54,11 @@ router.post("/login", async (req, res) => {
     req.session.user = user;
     req.session.isLoggedIn = true;
     const userType = user.userType;
-    // res.redirect(`/api/books/books`);
-    const books = await Book.find();
+    // const books = await Book.find();
 
-    res.render("book-store/bookStore", { books, userType });
+    res.redirect(`/api/books/books`);
+
+    // res.render("book-store/bookStore", { books, userType });
     // if (userType == "tutor") {
     //   const books = await Book.find();
     //   res.render("book-store/bookStore", { books, userType });

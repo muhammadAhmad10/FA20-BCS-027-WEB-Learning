@@ -125,7 +125,6 @@
             <p class="card-text"><%= book.author %></p>
             <p class="card-text">PKR <%= book.price %></p>
             <div class="container-fluid">
-              <% if (userType=='tutor') { %>
               <input
                 class="btn btn-primary"
                 type="button"
@@ -135,14 +134,13 @@
               <a class="btn btn-danger" href="/api/books/delete/<%=book._id%>"
                 >Delete</a
               >
-              <% } else{%>
+
               <input
                 class="btn btn-primary"
                 type="button"
                 value="Add to Cart"
                 onclick="location.href='/api/books/cart/<%= book._id %>'"
               />
-              <%}%>
             </div>
           </div>
         </div>

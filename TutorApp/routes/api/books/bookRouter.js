@@ -3,6 +3,7 @@ const router = express.Router();
 const multer = require("multer");
 const admin = require("firebase-admin");
 const serviceAccount = require("../../../serviceAccountKey.json");
+const checkSessionAuth = require("../../../middlewares/checkSessionAuth");
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
@@ -16,7 +17,7 @@ const Book = require("../../../models/book");
 
 //Handling book store operations
 //Get add book page
-router.get("/add", (req, res) => {
+router.get("/add", checkSessionAuth, (req, res) => {
   res.render("book-store/add-book");
 });
 
@@ -69,7 +70,7 @@ router.post("/add", upload.single("image"), async (req, res) => {
 });
 
 //Get all books from database on booKStore page
-router.get("/books", async (req, res) => {
+router.get("/books", checkSessionAuth, async (req, res) => {
   const books = await Book.find();
   res.render("book-store/bookStore", { books });
 });
@@ -117,45 +118,46 @@ router.get("/delete/:id", async (req, res) => {
   res.redirect("/api/books/books");
 });
 
-// //Add book to cart
-// router.get("/cart/:id", async (req, res) => {
-//   const book = await Book.findById(req.params.id);
-//   if (!book) return res.status(404).send("Book not found");
-//   let cart = req.cookies.cart || [];
+//Add book to cart
+router.get("/cart/:id", async (req, res) => {
+  const book = await Book.findById(req.params.id);
+  if (!book) return res.status(404).send("Book not found");
+  let cart = req.cookies.cart || [];
 
-//   // Add item to cart
-//   cart.push(book);
-//   console.log("book: ", book);
-//   console.log("cart: ", cart);
+  // Add item to cart
+  cart.push(book);
+  console.log("book: ", book);
+  console.log("cart: ", cart);
 
-//   // Store updated cart in cookie
-//   res.cookie("cart", cart);
+  // Store updated cart in cookie
+  res.cookie("cart", cart);
 
-//   // res.render("book-store/cart", { book });
-// });
+  res.render("book-store/cart", { cart });
+});
 
-// // Remove item from cart
-// // router.get("/remove-from-cart/:itemId", (req, res) => {
-// //   const { itemId } = req.params;
+// Remove item from cart
+router.get("/remove-from-cart/:itemId", (req, res) => {
+  const { itemId } = req.params;
 
-// //   // Retrieve cart from cookie
-// //   let cart = req.cookies.cart || [];
+  // Retrieve cart from cookie
+  let cart = req.cookies.cart || [];
 
-// //   // Remove item from cart
-// //   cart = cart.filter((item) => item !== itemId);
+  // Remove item from cart
+  cart = cart.filter((item) => item !== itemId);
 
-// //   // Store updated cart in cookie
-// //   res.cookie("cart", cart);
+  // Store updated cart in cookie
+  res.cookie("cart", cart);
 
-// //   res.send("Item removed from cart");
-// // });
+  res.redirect("/api/books/cart");
+  // res.send("Item removed from cart");
+});
 
 // // // Display cart items
-// // router.get("/cart", (req, res) => {
-// //   // Retrieve cart from cookie
-// //   const cart = req.cookies.cart || [];
+// router.get("/cart", (req, res) => {
+//   // Retrieve cart from cookie
+//   const cart = req.cookies.cart || [];
 
-// //   res.send(`Cart Items: ${cart}`);
-// // });
+//   res.send(`Cart Items: ${cart}`);
+// });
 
 module.exports = router;
