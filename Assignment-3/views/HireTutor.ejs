@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/HireTutor.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Sofia"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link
+      href="https://getbootstrap.com/docs/5.2/assets/css/docs.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">Tutor Finder</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="/api/tutors/list">Hire Tutor</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/api/books/books">Book Store</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/api/users/login">Logout</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div class="front">
+      <img src="/images/a.png" alt="image" />
+      <h1>Welcome to our Tutor Finder App!</h1>
+      <p>Find the perfect tutor for your learning needs.</p>
+      <!-- <div class="w-50 text-light bg-primary" id="l">
+      <h2 class="animate__heartBeat">Learn</h2>
+      <h2 class="animate__heartBeat">From highly</h2>
+      <h2 class="animate__heartBeat">Qualified teachers</h2>
+    </div>
+    <div class="w-50" id="r">
+      <a href="#"><p>Explore</p></a>
+    </div> -->
+    </div>
+
+    <div id="book container-fluid">
+      <a class="btn btn-primary ms-5 mt-4" href="/api/tutors/addTutor"
+        >Add Tutor</a
+      >
+      <div
+        class="tutors container-fluid d-flex flex-wrap justify-content-center"
+      >
+        <!-- <div class="card" style="width: 18rem">
+        <img src="/images/profile-pic.png" class="card-img-top" alt="pic" />
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem">
+        <img src="/images/profile-pic.png" class="card-img-top" alt="pic" />
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem">
+        <img src="/images/profile-pic.png" class="card-img-top" alt="pic" />
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div> -->
+        <% tutors.forEach(tutor => { %>
+        <div class="card" style="width: 18rem">
+          <img
+            id="image"
+            src="<%= tutor.image %>"
+            class="card-img-top"
+            alt="pic"
+          />
+          <div class="card-body">
+            <h5 class="card-title"><b><%= tutor.name %></b></h5>
+            <p class="card-text"><%= tutor.email %></p>
+            <p id="sub" class="card-text">
+              <%= tutor.subject1 %> | <%= tutor.subject2 %>
+            </p>
+            <p class="card-text"><%= tutor.bio %></p>
+            <a
+              href="/api/tutors/details/<%= tutor._id%>"
+              class="btn btn-primary"
+              >Details</a
+            >
+            <a
+              href="/api/tutors/editTutor/<%= tutor._id%>"
+              class="btn btn-primary"
+              >Edit</a
+            >
+            <a
+              href="/api/tutors/deleteTutor/<%= tutor._id%>"
+              class="btn btn-danger"
+              >Delete</a
+            >
+          </div>
+        </div>
+        <% }) %>
+      </div>
+      <div class="pagination justify-content-center">
+        <nav aria-label="Page navigation">
+          <ul class="pagination">
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+              </a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer container-xxl">
+        <div class="row">
+          <div class="col-md-3 follow">
+            <h3>Tutor Finder</h3>
+            <div class="icon">
+              <a
+                class="a shadow-lg mb-2 rounded"
+                rel="noreferrer"
+                href="https://instagram.com/m_ahmad1023?igshid=YmMyMTA2M2Y="
+                target="_blank"
+                ><i class="fa fa-instagram"></i
+              ></a>
+              <a
+                class="a shadow-lg mb-2 rounded"
+                rel="noreferrer"
+                href="https://linkedin.com/in/muhammad-ahmad-5479241b0"
+                target="_blank"
+                ><i class="fa fa-linkedin"></i
+              ></a>
+              <a
+                class="a shadow-lg mb-2 rounded"
+                rel="noreferrer"
+                href="https://github.com/muhammadAhmad10"
+                target="_blank"
+                ><i class="fa fa-github"></i
+              ></a>
+              <a
+                class="a shadow-lg mb-2 rounded"
+                rel="noreferrer"
+                href="https://twitter.com/ahmaddevtobe"
+                target="_blank"
+                ><i class="fa fa-twitter"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="col-md-3 services">
+            <h3>Services</h3>
+            <ul class="service">
+              <li><a href="#">Find a Tutor</a></li>
+              <li><a href="#">Become a Tutor</a></li>
+              <li><a href="#">FAQs</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h3>About Us</h3>
+            <p>Your website's brief description and purpose goes here.</p>
+          </div>
+          <div class="col-md-3 contact">
+            <h3>Contact Us</h3>
+            <ul class="address">
+              <li>123 Main Street, City</li>
+              <li>Phone: 555-555-5555</li>
+              <li>Email: info@yourwebsite.com</li>
+            </ul>
+          </div>
+        </div>
+        <hr />
+        <p class="text-center copyright">
+          Copyright &copy; - All Rights Reserved
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
