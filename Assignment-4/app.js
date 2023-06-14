@@ -45,8 +45,7 @@ const port = 3000;
 app.listen(port, () => console.log(`Listening on port ${port}...`));
 
 // Connect to MongoDB
-const connectionString =
-  "mongodb+srv://ahmad:ahmad@cluster0.nsvp1vi.mongodb.net/TutorApp";
+const connectionString = process.env.connect;
 const connection = mongoose
   .connect(connectionString, {
     useNewUrlParser: true,

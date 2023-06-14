@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
@@ -45,8 +46,7 @@ const port = 3000;
 app.listen(port, () => console.log(`Listening on port ${port}...`));
 
 // Connect to MongoDB
-const connectionString =
-  "mongodb+srv://ahmad:ahmad@cluster0.nsvp1vi.mongodb.net/TutorApp";
+const connectionString = process.env.DATABASE_URL;
 const connection = mongoose
   .connect(connectionString, {
     useNewUrlParser: true,
